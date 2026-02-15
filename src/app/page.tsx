@@ -1,19 +1,18 @@
 import Image from "next/image";
-import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "Fintech Dashboard",
-      description: "A revolutionary financial tracking application with real-time analytics and glassmorphism UI.",
-      image: "/images/project1.png",
+      title: "Deriverse Trading Journal",
+      description: "Analytics & Journal platform for Deriverse",
+      image: "/images/Deriverse.png",
     },
     {
       id: 2,
-      title: "Creative Agency Portal",
-      description: "A multi-platform portfolio management system for creative professionals and agencies.",
-      image: "/images/project2.png",
+      title: "Equicom Design Team Resource Portal",
+      description: "A centralized platform for design team resources.",
+      image: "/images/Ymparalalog.png",
     },
   ];
 
@@ -21,59 +20,42 @@ export default function Home() {
     <main>
       {/* Header Section */}
       <section className="header">
-        <div className="profile-container">
-          <Image
-            src="/images/profile.png"
-            alt="Rahul Yamparala"
-            width={140}
-            height={140}
-            className="profile-image"
-            priority
-          />
-        </div>
-        <h1 className="name">Rahul Yamparala</h1>
-        <p className="title">Full Stack Developer & UI Designer</p>
+        <h1 className="name">Yamparala Rahul</h1>
+        <p className="title">UX Engineeer at <a href="https://www.linkedin.com/company/equicom-technologies/posts/?feedView=all">Equicom Technologies</a></p>
+        <p className="title">Let's connect or chat? <a href="https://t.me/yamparalarahul1">Telegram</a> or <a href="https://wa.me/918897132717" className="whatsapp-link">Whatsapp</a></p>
 
-        <div className="social-bar">
-          <a href="#" className="social-link" aria-label="GitHub">
-            <Github size={20} />
-          </a>
-          <a href="#" className="social-link" aria-label="LinkedIn">
-            <Linkedin size={20} />
-          </a>
-          <a href="#" className="social-link" aria-label="Email">
-            <Mail size={20} />
-          </a>
-        </div>
       </section>
 
       {/* Projects Section */}
       <section>
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">Personal Engineering UX Projects</h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <div key={project.id} className="glass-card project-card">
-              <div className="project-image-container">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  className="project-image"
-                />
+            <a key={project.id} href={project.id === 1 ? "https://deriverse.vercel.app" : "https://yamparalalog.vercel.app"} target="_blank" rel="noopener noreferrer" className="block">
+              <div className="glass-card project-card">
+                <div className="project-image-container">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={820}
+                    height={410}
+                    className="project-image"
+                  />
+                </div>
+                <div className="project-info">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+          
+                </div>
               </div>
-              <div className="project-info">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
       {/* Footer */}
       <footer>
-        <p>© 2026 Rahul Yamparala. Built with Next.js.</p>
+        <p>© 2026 Yamparala Rahul.</p>
       </footer>
     </main>
   );
