@@ -29,6 +29,15 @@ export const blogPosts: BlogPost[] = [
     entries: [
       {
         date: "2026-03-24",
+        title: "Claude Code on Mobile and the Localhost Problem",
+        paragraphs: [
+          "I am trying Claude Code on mobile to develop my log app, and it is really great.",
+          "There is one minor challenge: how to view localhost on mobile while developing.",
+          "Found a solution called Wormkey: https://github.com/max-pantom/worm — will share more about it as I go.",
+        ],
+      },
+      {
+        date: "2026-03-24",
         title: "Keep PRs Screen-Specific",
         paragraphs: [
           "A PR can either be merged or canceled. That binary outcome means every PR needs to stand on its own.",
