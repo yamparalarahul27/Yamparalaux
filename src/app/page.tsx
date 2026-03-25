@@ -201,11 +201,11 @@ export default function Home() {
             </p>
 
             {/* Contact CTA */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href="https://t.me/yamparalarahul1" className="brutal-btn w-full sm:w-auto" target="_blank" rel="noreferrer">
+            <div className="flex flex-row items-center justify-center gap-3">
+              <a href="https://t.me/yamparalarahul1" className="brutal-btn sm:w-auto" target="_blank" rel="noreferrer">
                 Telegram
               </a>
-              <a href="https://wa.me/918897132717" className="brutal-btn w-full sm:w-auto" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/918897132717" className="brutal-btn sm:w-auto" target="_blank" rel="noreferrer">
                 WhatsApp
               </a>
               <button
