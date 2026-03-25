@@ -28,12 +28,12 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-sm font-bold tracking-tight">Yamparala</span>
-          <span className="text-sm font-bold tracking-tight text-[var(--text-primary)]">Rahul</span>
+          <span className="text-sm lg:text-base font-bold tracking-tight">Yamparala</span>
+          <span className="text-sm lg:text-base font-bold tracking-tight text-[var(--text-primary)]">Rahul</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -59,7 +59,7 @@ export default function Navbar() {
               Work
             </button>
             {workOpen && (
-              <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-[var(--border-color)] shadow-sm">
+              <div className="absolute top-full right-0 mt-2 w-64 max-w-[calc(100vw-2rem)] bg-white border border-[var(--border-color)] shadow-sm">
                 {workLinks.map((link) => (
                   <Link
                     key={link.href}

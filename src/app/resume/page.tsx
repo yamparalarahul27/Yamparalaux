@@ -26,8 +26,8 @@ const resumes = [
 export default function ResumePage() {
   return (
     <>
-      <main className="page-container mt-[132px] text-[var(--text-primary)]">
-        <div className="flex-1 flex flex-col gap-[72px] pt-8">
+      <main className="page-container mt-20 sm:mt-24 lg:mt-[132px] text-[var(--text-primary)]">
+        <div className="flex-1 flex flex-col gap-8 sm:gap-12 lg:gap-[56px] pt-8">
           {/* Header */}
           <section className="flex flex-col gap-6 animate-enter">
             <Link
@@ -38,7 +38,7 @@ export default function ResumePage() {
             </Link>
 
             <div className="flex flex-col gap-3">
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
                 Hi, Founder/Builder/Hr.
               </h1>
               <p className="text-lg text-[var(--text-secondary)] max-w-2xl text-balance">
@@ -49,7 +49,7 @@ export default function ResumePage() {
           </section>
 
           {/* Resume Cards */}
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-enter">
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 animate-enter">
             {resumes.map((resume) => (
               <div
                 key={resume.id}

@@ -8,8 +8,8 @@ import Footer from "../../components/Footer";
 export default function MyStoryPage() {
   return (
     <>
-      <main className="page-container mt-[132px] text-[var(--text-primary)]">
-        <div className="flex-1 flex flex-col gap-[72px] pt-8">
+      <main className="page-container mt-20 sm:mt-24 lg:mt-[132px] text-[var(--text-primary)]">
+        <div className="flex-1 flex flex-col gap-8 sm:gap-12 lg:gap-[56px] pt-8">
           {/* Back link */}
           <section className="flex flex-col gap-6 animate-enter">
             <Link
@@ -24,7 +24,7 @@ export default function MyStoryPage() {
           {/* Hero */}
           <section className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center animate-enter delay-100">
             <div className="flex-1 flex flex-col gap-5">
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
                 I am Yamparala Rahul
               </h1>
               <p className="text-lg lg:text-xl text-[var(--text-secondary)] max-w-2xl text-balance">
