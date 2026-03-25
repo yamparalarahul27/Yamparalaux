@@ -59,7 +59,7 @@ export default function Navbar() {
               Work
             </button>
             {workOpen && (
-              <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-[var(--border-color)] shadow-sm">
+              <div className="absolute top-full right-0 mt-2 w-64 max-w-[calc(100vw-2rem)] bg-white border border-[var(--border-color)] shadow-sm">
                 {workLinks.map((link) => (
                   <Link
                     key={link.href}

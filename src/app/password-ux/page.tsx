@@ -65,9 +65,9 @@ export default function PasswordUXPage() {
     <div className="page-container">
       <div className="animate-enter">
         {/* ====== HERO ====== */}
-        <header className="max-w-4xl mx-auto px-4 lg:px-0 pt-24 pb-12">
+        <header className="max-w-4xl mx-auto px-4 lg:px-0 pt-12 sm:pt-16 lg:pt-24 pb-8 sm:pb-12">
           <SectionLabel>Case Study</SectionLabel>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-4">
+          <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-tight mb-4">
             Product Experience of Password Creation
           </h1>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mb-6">

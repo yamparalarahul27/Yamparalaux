@@ -46,8 +46,8 @@ const teamPhotos = [
 export default function SyncloPage() {
   return (
     <>
-      <main className="page-container mt-[132px] text-[var(--text-primary)]">
-        <div className="flex-1 flex flex-col gap-[72px] pt-8">
+      <main className="page-container mt-20 sm:mt-24 lg:mt-[132px] text-[var(--text-primary)]">
+        <div className="flex-1 flex flex-col gap-8 sm:gap-12 lg:gap-[72px] pt-8">
           {/* Back link */}
           <Link
             href="/"
@@ -59,7 +59,7 @@ export default function SyncloPage() {
           {/* ── Hero ── */}
           <section className="flex flex-col gap-6 animate-enter">
             <div className="flex flex-col gap-3">
-              <h1 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
                 Building connected OPD Care at Singapore Based
               </h1>
               <p className="text-sm font-mono text-[var(--accent)] tracking-wide">

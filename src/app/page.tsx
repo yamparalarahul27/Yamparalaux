@@ -133,10 +133,10 @@ export default function Home() {
 
   return (
     <>
-      <main className="page-container mt-[72px] text-[var(--text-primary)]">
+      <main className="page-container mt-12 sm:mt-16 lg:mt-[72px] text-[var(--text-primary)]">
 
         {/* Main Content Area */}
-        <div className="flex-1 flex flex-col gap-[72px] pt-8">
+        <div className="flex-1 flex flex-col gap-8 sm:gap-12 lg:gap-[72px] pt-8">
 
           {/* Hero Section */}
           <section className="flex flex-col items-center text-center gap-8 animate-enter">
@@ -152,7 +152,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
+                <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
                   Yamparala Rahul
                 </h1>
                 <p className="text-sm text-[var(--text-secondary)] font-medium mt-3">
