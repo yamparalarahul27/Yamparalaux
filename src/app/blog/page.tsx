@@ -13,8 +13,8 @@ function formatDate(iso: string) {
 
 export default function BlogPage() {
   return (
-    <main className="page-container mt-[132px] text-[var(--text-primary)]">
-      <div className="flex-1 flex flex-col gap-[72px] pt-8">
+    <main className="page-container mt-20 sm:mt-24 lg:mt-[132px] text-[var(--text-primary)]">
+      <div className="flex-1 flex flex-col gap-8 sm:gap-12 lg:gap-[56px] pt-8">
         {/* Header */}
         <section className="flex flex-col gap-6 animate-enter">
           <Link
@@ -26,7 +26,7 @@ export default function BlogPage() {
           </Link>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tighter leading-tight">
               Blog
             </h1>
             <p className="text-lg text-[var(--text-secondary)] max-w-2xl text-balance">

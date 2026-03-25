@@ -52,8 +52,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <main className="page-container mt-[132px] text-[var(--text-primary)]">
-      <div className="flex-1 flex flex-col gap-[56px] pt-8">
+    <main className="page-container mt-20 sm:mt-24 lg:mt-[132px] text-[var(--text-primary)]">
+      <div className="flex-1 flex flex-col gap-8 sm:gap-10 lg:gap-[56px] pt-8">
         <section className="flex flex-col gap-6 animate-enter">
           <Link
             href="/blog"
@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span>{post.readTime}</span>
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-bold tracking-tighter leading-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tighter leading-tight">
               {post.title}
             </h1>
 

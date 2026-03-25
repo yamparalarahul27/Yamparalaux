@@ -106,7 +106,7 @@ h6 {
 .brutal-card {
   position: relative;
   background: #FFFFFF;
-  padding: var(--space-32);
+  padding: 16px;
   border: var(--grid-line);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
@@ -156,7 +156,7 @@ h6 {
   align-items: center;
   justify-content: center;
   gap: var(--space-8);
-  padding: var(--space-12) 24px;
+  padding: 10px 16px;
   font-weight: 600;
   letter-spacing: -0.01em;
   background-color: transparent;
@@ -209,8 +209,26 @@ h6 {
   padding: 1rem;
 }
 
+@media (min-width: 640px) {
+  .brutal-card {
+    padding: 24px;
+  }
+  .brutal-btn {
+    padding: var(--space-12) 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding: 1.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .page-container {
     padding: 2rem;
+  }
+  .brutal-card {
+    padding: var(--space-32);
   }
 }
