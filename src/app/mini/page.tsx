@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -27,6 +28,16 @@ export default function MiniPage() {
     <main className="max-w-xl mx-auto px-4 py-16 sm:py-24 text-[var(--text-primary)]">
       {/* Bio */}
       <section className="flex flex-col gap-4 mb-16">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/Passport Size Photo.png"
+            alt="Yamparala Rahul"
+            width={24}
+            height={24}
+            className="rounded-full object-cover w-6 h-6"
+          />
+          <span className="text-sm font-semibold">Yamparala Rahul</span>
+        </div>
         <p className="text-base leading-relaxed">
           Yamparala Rahul is a Design Engineer based in India with 5.2 years of experience.
           He currently works at{" "}
