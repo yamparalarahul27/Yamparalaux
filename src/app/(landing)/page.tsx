@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import DogFollowerClient from "../../components/DogFollower/DogFollowerClient";
 
 export const metadata: Metadata = {
@@ -47,11 +46,7 @@ export default function MiniPage() {
         </p>
         <p className="text-base leading-relaxed">
           He joined Equicom Technologies in 2025 after revamping Pubkey&apos;s
-          UI on Solana. Before that, he spent 2.4 years at Entytle simplifying B2B SaaS, and 2 years at{" "}
-          <Link href="/2-years-at-synclo" className="underline decoration-1 underline-offset-4 hover:text-[var(--accent)] transition-colors">
-            Synclo
-          </Link>{" "}
-          designing healthcare systems. He founded Yamparala.in in 2019.
+          UI on Solana. Before that, he spent 2.4 years at Entytle simplifying B2B SaaS, and 2 years at Synclo designing healthcare systems. He founded Yamparala.in in 2019.
         </p>
         <p className="text-base leading-relaxed">
           Member of IslandDAO. Contributor at SuperteamIndia. Greed Academy graduate. Certified by Google and IBM.
