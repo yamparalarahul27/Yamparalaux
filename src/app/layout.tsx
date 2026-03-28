@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   title: "Yamparala Rahul - Design Engineer",
   description: "Design Engineer for Web3, B2B & Healthcare. 5.2 years of experience.",
   icons: {
-    icon: '/favicon.png',
+    icon: '/Passport Size Photo.png',
+    apple: '/Passport Size Photo.png',
   },
 };
 
