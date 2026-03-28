@@ -23,6 +23,19 @@ export const metadata: Metadata = {
     icon: '/Passport Size Photo.png',
     apple: '/Passport Size Photo.png',
   },
+  openGraph: {
+    title: "Yamparala Rahul - Design Engineer",
+    description: "Design Engineer for Web3, B2B & Healthcare. 5.2 years of experience.",
+    siteName: "Yamparala Rahul",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yamparala Rahul - Design Engineer",
+    description: "Design Engineer for Web3, B2B & Healthcare. 5.2 years of experience.",
+    creator: "@yamparalarahul",
+  },
 };
 
 export default async function RootLayout({
