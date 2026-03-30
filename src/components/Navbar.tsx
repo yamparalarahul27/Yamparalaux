@@ -10,19 +10,9 @@ export default function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [workOpen, setWorkOpen] = useState(false);
 
   const navLinks = [
     { href: "/mini", label: t("home") },
-    { href: "/my-story", label: t("aboutMe") },
-    { href: "/notes", label: t("notes") },
-    { href: "/resume", label: t("resume") },
-  ];
-
-  const workLinks = [
-    { href: "/2-years-at-synclo", label: "2 Years at Synclo" },
-    { href: "/password-ux", label: "UX of Password Creation" },
-    { href: "/customer-journey-mapping", label: "Customer Journey Mapping" },
   ];
 
   return (
@@ -47,36 +37,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-
-          {/* Work Dropdown */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() => setWorkOpen(!workOpen)}
-              onBlur={() => setTimeout(() => setWorkOpen(false), 150)}
-              className={`text-sm font-medium transition-colors hover:text-[var(--text-primary)] ${
-                workLinks.some((l) => pathname === l.href) ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
-              }`}
-            >
-              {t("work")}
-            </button>
-            {workOpen && (
-              <div className="absolute top-full right-0 mt-2 w-64 max-w-[calc(100vw-2rem)] bg-[var(--surface-color)] border border-[var(--border-color)] shadow-sm">
-                {workLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`block px-4 py-3 text-sm transition-colors hover:bg-[var(--bg-color)] ${
-                      pathname === link.href ? "font-semibold text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
-                    }`}
-                    onClick={() => setWorkOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
 
           <a
             href="https://wa.me/918897132717"
@@ -109,21 +69,6 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`py-3 px-4 text-sm font-medium transition-colors ${
-                  pathname === link.href ? "text-[var(--text-primary)] bg-[var(--bg-color)]" : "text-[var(--text-secondary)]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="py-2 px-4 text-xs font-mono uppercase tracking-[0.2em] text-[var(--text-secondary)]">
-              {t("work")}
-            </div>
-            {workLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`py-3 px-4 pl-8 text-sm font-medium transition-colors ${
                   pathname === link.href ? "text-[var(--text-primary)] bg-[var(--bg-color)]" : "text-[var(--text-secondary)]"
                 }`}
               >
