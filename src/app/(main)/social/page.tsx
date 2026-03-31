@@ -20,7 +20,7 @@ export default function SocialFollowPage() {
     <>
       <main className="page-container mt-12 sm:mt-16 lg:mt-[72px] text-[var(--text-primary)]">
         {/* Back button top */}
-        <BackLink href="/" label="Back" className="animate-enter mb-4" />
+        <BackLink href="/" label="Back to Index" className="animate-enter mb-4" />
 
         <div className="flex-1 flex flex-col gap-8 sm:gap-10 lg:gap-[44px] pt-8">
           {/* Header */}
@@ -70,7 +70,7 @@ export default function SocialFollowPage() {
             ))}
           </section>
           {/* Back button bottom */}
-          <BackLink href="/" label="Back" />
+          <BackLink href="/" label="Thank you, Back to index" />
         </div>
       </main>
       <Footer />
