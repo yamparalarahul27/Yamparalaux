@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getBlogPostBySlug } from "@/lib/blog";
+import BackLink from "@/components/BackLink";
 
 export const dynamic = "force-dynamic";
 
@@ -47,12 +47,7 @@ export default async function BlogPostPage({
     <main className="min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-3xl mx-auto flex flex-col gap-10">
         {/* Back button top */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center text-sm font-bold tracking-wide uppercase text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors animate-enter"
-        >
-          ← {t("back")}
-        </Link>
+        <BackLink href="/blog" label={t("back")} className="animate-enter" />
 
         {/* Entries */}
         {post.entries && post.entries.length > 0 && (
@@ -91,12 +86,7 @@ export default async function BlogPostPage({
         )}
 
         {/* Back button bottom */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center text-sm font-bold tracking-wide uppercase text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
-        >
-          ← {t("back")}
-        </Link>
+        <BackLink href="/blog" label={t("back")} />
       </div>
     </main>
   );
