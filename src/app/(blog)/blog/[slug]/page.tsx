@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getBlogPostBySlug } from "@/lib/blog";
@@ -45,26 +46,13 @@ export default async function BlogPostPage({
   return (
     <main className="min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-3xl mx-auto flex flex-col gap-10">
-        {/* Header */}
-        <header className="flex flex-col gap-4 animate-enter">
-          <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[var(--text-secondary)]">
-            <span>
-              {t("lastUpdated")} {formatDateLong(post.lastUpdated)}
-            </span>
-            <span className="w-8 h-px bg-[var(--border-color)]" />
-            <span className="text-[var(--accent)] font-semibold">
-              {post.category}
-            </span>
-            <span className="w-8 h-px bg-[var(--border-color)]" />
-            <span>{post.readTime}</span>
-          </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight">
-            {post.title}
-          </h1>
-          <p className="text-lg text-[var(--text-secondary)] text-balance">
-            {post.excerpt}
-          </p>
-        </header>
+        {/* Back button top */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center text-sm font-bold tracking-wide uppercase text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors animate-enter"
+        >
+          ← {t("back")}
+        </Link>
 
         {/* Entries */}
         {post.entries && post.entries.length > 0 && (
@@ -101,6 +89,14 @@ export default async function BlogPostPage({
             ))}
           </div>
         )}
+
+        {/* Back button bottom */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center text-sm font-bold tracking-wide uppercase text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+        >
+          ← {t("back")}
+        </Link>
       </div>
     </main>
   );
