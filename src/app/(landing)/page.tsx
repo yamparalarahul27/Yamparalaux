@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 const projects = [
+  { year: "2025", title: "AgentUx", accent: "WIP" },
+  { year: "2025", title: "YDex", accent: "WIP" },
   { year: "2024", title: "Deriverse Trading Journal", accent: "Live" },
   { year: "2024", title: "Crpko Graphic Lab", accent: "Internal" },
   { year: "2024", title: "Log & Resources of Rahul", accent: "Live" },
-  { year: "2025", title: "YDex", accent: "WIP" },
-  { year: "2025", title: "AgentUx", accent: "WIP" },
   { year: "2025", title: "ConceptDJ", accent: "Concept" },
   { year: "2025", title: "OME-sim", accent: "Prototype" },
   { year: "2025", title: "YPM", accent: "Idea" },
@@ -28,7 +28,7 @@ export default function MiniPage() {
   return (
     <>
     <DogFollowerClient />
-    <main className="max-w-xl px-4 py-16 sm:py-24 text-[var(--text-primary)]">
+    <main className="max-w-xl !px-4 !py-16 sm:!py-24 text-[var(--text-primary)] [&_section]:!p-0 [&_section>div]:!p-0">
       {/* Bio */}
       <section className="flex flex-col gap-4 mb-16">
         <div className="flex items-center gap-2">
