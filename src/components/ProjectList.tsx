@@ -45,12 +45,14 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
       </section>
 
       {/* Toast */}
-      <div
-        className={`fixed bottom-8 left-4 right-4 z-50 px-5 py-3 rounded-lg bg-[#111111] text-white text-sm font-medium shadow-lg transition-all duration-300 pointer-events-none text-center ${
-          toastVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-        }`}
-      >
-        👋 nothing to show here yet
+      <div className="fixed bottom-8 left-0 right-0 z-50 flex justify-center pointer-events-none px-3">
+        <div
+          className={`w-fit max-w-[calc(100vw-24px)] px-5 py-3 rounded-lg bg-[#111111] text-white text-sm font-medium shadow-lg transition-all duration-300 text-center ${
+            toastVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+          }`}
+        >
+          👋 nothing to show here yet
+        </div>
       </div>
     </>
   );
