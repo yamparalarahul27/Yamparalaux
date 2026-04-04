@@ -14,7 +14,7 @@ export default function CVRoute() {
       <div className="animate-enter delay-100">
         <CVPage />
       </div>
-      <BackLink href="/" label="Back" className="mt-8" />
+
     </main>
   );
 }

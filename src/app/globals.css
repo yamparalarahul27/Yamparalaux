@@ -219,6 +219,16 @@ h6 {
   color: var(--accent);
 }
 
+/* Peektext: dim surrounding text on hover */
+.peektext-dimmed {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.peektext-dimmed .peektext-active {
+  color: var(--text-primary);
+}
+
 /* Minimalist Utilities */
 .text-balance {
   text-wrap: balance;
