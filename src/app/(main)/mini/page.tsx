@@ -12,7 +12,6 @@ import PasswordUxSection from "../../../components/sections/PasswordUxSection";
 import CustomerJourneySection from "../../../components/sections/CustomerJourneySection";
 import MyStorySection from "../../../components/sections/MyStorySection";
 import NotesSection from "../../../components/sections/NotesSection";
-import ResumeSection from "../../../components/sections/ResumeSection";
 import DesignSystemSection from "../../../components/sections/DesignSystemSection";
 import WorkModeSection from "../../../components/sections/WorkModeSection";
 
@@ -354,14 +353,10 @@ export default function MiniPortfolio() {
           <hr className="border-t border-[var(--border-color)] my-4" />
           <NotesSection />
           <hr className="border-t border-[var(--border-color)] my-4" />
-          <ResumeSection />
-          <hr className="border-t border-[var(--border-color)] my-4" />
           <DesignSystemSection />
           <hr className="border-t border-[var(--border-color)] my-4" />
           <WorkModeSection />
 
-          {/* Back button bottom */}
-          <BackLink href="/" label="Back" />
 
         </div>
       </main>

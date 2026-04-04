@@ -89,8 +89,6 @@ export default function SocialFollowPage() {
               </a>
             ))}
           </section>
-          {/* Back button bottom */}
-          <BackLink href="/" label="Thank you, Back to index" />
         </div>
       </main>
       <Footer />

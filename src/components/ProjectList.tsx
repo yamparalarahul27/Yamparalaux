@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import Peektext from "./Peektext";
 
 interface Project {
   year: string;
   title: string;
   accent: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 export default function ProjectList({ projects }: { projects: Project[] }) {
@@ -24,7 +27,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <section className="grid grid-cols-[48px_1fr_auto] gap-x-2">
+      <section className="grid grid-cols-[48px_1fr_auto] gap-x-2" data-peektext-container>
         {projects.map((project, i) => (
           <div
             key={project.title}
@@ -35,7 +38,16 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
               {project.year}
             </span>
             <span className="text-sm truncate py-3 border-t border-[var(--border-color)] flex items-center">
-              {project.title}
+              {project.image && project.imageAlt ? (
+                <Peektext
+                  text={project.title}
+                  image={project.image}
+                  imageAlt={project.imageAlt}
+                  hideUnderline
+                />
+              ) : (
+                project.title
+              )}
             </span>
             <span className="text-xs font-mono text-[var(--text-secondary)] text-right py-3 border-t border-[var(--border-color)] flex items-center justify-end">
               {project.accent}

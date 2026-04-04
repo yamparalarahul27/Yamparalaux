@@ -85,8 +85,6 @@ export default async function BlogPostPage({
           </div>
         )}
 
-        {/* Back button bottom */}
-        <BackLink href="/blog" label={t("back")} />
       </div>
     </main>
   );

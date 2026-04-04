@@ -32,13 +32,13 @@ export default function MiniPage() {
     <main className="max-w-xl !px-4 !py-16 sm:!py-24 text-[var(--text-primary)] [&_section]:!p-0 [&_section>div]:!p-0 [&_footer]:!p-0">
       {/* Bio */}
       <section className="flex flex-col gap-4 mb-16">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 pb-1">
           <Image
             src="/Passport Size Photo.png"
             alt="Yamparala Rahul"
-            width={32}
-            height={32}
-            className="object-cover w-8 h-8"
+            width={40}
+            height={40}
+            className="object-cover w-10 h-10 rounded-lg"
           />
           <span className="text-sm font-semibold">Yamparala Rahul</span>
         </div>
@@ -53,7 +53,7 @@ export default function MiniPage() {
         <p className="text-base leading-relaxed">
           Member of IslandDAO. Contributor at SuperteamIndia. Greed Academy graduate. Certified by Google and IBM.
         </p>
-        <p className="text-sm text-[var(--text-secondary)]">
+        <p className="text-sm text-[var(--text-secondary)] pb-4">
           <span>@yamparalarahul</span>
           {" / "}
           <a href="mailto:rahulvignanwork@gmail.com" className="hover:text-[var(--text-primary)] transition-colors">rahulvignanwork@gmail.com</a>
