@@ -45,10 +45,19 @@ const careerHighlights = [
   "Worked at Entytle (2020-2022) on installed-base management and B2B SaaS product UX.",
   "Worked at Synclo (2022-2024) on OPD and healthcare workflows across multiple hospital products.",
   "Joined Equicom Technologies in 2025 and continued building web3 products and internal tooling.",
+  "Built and managed the ValveyAI website on Framer — an all-in-one no-code platform for websites, e-commerce, CRM, and automation.",
   "Maintains an active builder profile on Superteam Earn with public submission and win history.",
 ];
 
 const workItems: WorkItem[] = [
+  {
+    year: "2025",
+    title: "ValveyAI Website",
+    type: "Framer build",
+    note: "Built and managed the marketing site for ValveyAI, an all-in-one no-code platform covering website builder, e-commerce, CRM, funnels, and automation tools.",
+    status: "Live",
+    href: "https://valveyai.com",
+  },
   {
     year: "2024",
     title: "Revamping Opensource Discord Verification (Pubkey)",
