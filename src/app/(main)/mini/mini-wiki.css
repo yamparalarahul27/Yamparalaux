@@ -1,27 +1,50 @@
 /*
- * Wikipedia Dark Theme (Codex Design Tokens)
- * Source: wikimedia/design-codex dark.json
- * Only applied to the /mini wiki page
+ * Wikipedia Theme for /mini page
+ * Light: classic Wikipedia white
+ * Dark: Codex Design Tokens (dark.json)
+ * Follows system preference via prefers-color-scheme
  */
 
-/* ── Design Tokens ── */
+/* ── Light Theme (default) ── */
 .wiki-article {
-  --wiki-bg-base: #101418;
-  --wiki-bg-surface: #202122;
-  --wiki-bg-neutral: #27292d;
-  --wiki-text-primary: #eaecf0;
-  --wiki-text-emphasized: #f8f9fa;
-  --wiki-text-muted: #a2a9b1;
-  --wiki-text-disabled: #54595d;
-  --wiki-link: #88a3e8;
-  --wiki-link-hover: #a6bbf5;
-  --wiki-link-visited: #a799cd;
-  --wiki-border-base: #72777d;
-  --wiki-border-subtle: #54595d;
-  --wiki-border-muted: #404244;
-  --wiki-table-header: #27292d;
-  --wiki-table-row-alt: #202122;
-  --wiki-accent: #6485d1;
+  --wiki-bg-base: #ffffff;
+  --wiki-bg-surface: #f8f9fa;
+  --wiki-bg-neutral: #eaecf0;
+  --wiki-text-primary: #202122;
+  --wiki-text-emphasized: #000000;
+  --wiki-text-muted: #54595d;
+  --wiki-text-disabled: #a2a9b1;
+  --wiki-link: #0645ad;
+  --wiki-link-hover: #0b0080;
+  --wiki-link-visited: #0b0080;
+  --wiki-border-base: #a2a9b1;
+  --wiki-border-subtle: #c8ccd1;
+  --wiki-border-muted: #eaecf0;
+  --wiki-table-header: #eaecf0;
+  --wiki-table-row-alt: #f8f9fa;
+  --wiki-accent: #3366cc;
+}
+
+/* ── Dark Theme (system preference) ── */
+@media (prefers-color-scheme: dark) {
+  .wiki-article {
+    --wiki-bg-base: #101418;
+    --wiki-bg-surface: #202122;
+    --wiki-bg-neutral: #27292d;
+    --wiki-text-primary: #eaecf0;
+    --wiki-text-emphasized: #f8f9fa;
+    --wiki-text-muted: #a2a9b1;
+    --wiki-text-disabled: #54595d;
+    --wiki-link: #88a3e8;
+    --wiki-link-hover: #a6bbf5;
+    --wiki-link-visited: #a799cd;
+    --wiki-border-base: #72777d;
+    --wiki-border-subtle: #54595d;
+    --wiki-border-muted: #404244;
+    --wiki-table-header: #27292d;
+    --wiki-table-row-alt: #202122;
+    --wiki-accent: #6485d1;
+  }
 }
 
 /* ── Article container ── */
@@ -31,17 +54,22 @@
   width: 100%;
   max-width: 72rem;
   border: 1px solid var(--wiki-border-base);
-  background-color: var(--wiki-bg-surface);
+  background-color: var(--wiki-bg-base);
   color: var(--wiki-text-primary);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   font-variant-numeric: tabular-nums;
   overflow: hidden;
+}
+@media (prefers-color-scheme: dark) {
+  .wiki-article {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
 }
 
 /* ── Header ── */
 .wiki-header {
   border-bottom: 1px solid var(--wiki-border-base);
-  background-color: var(--wiki-bg-neutral);
+  background-color: var(--wiki-bg-surface);
   padding: 0.75rem 0.75rem;
 }
 @media (min-width: 640px) {
@@ -60,7 +88,7 @@
 }
 
 .wiki-surface {
-  background-color: var(--wiki-bg-neutral);
+  background-color: var(--wiki-bg-surface);
 }
 
 .wiki-link {
@@ -92,8 +120,8 @@
 
 /* ── Cards (contents nav, mobile items, changelog) ── */
 .wiki-card {
-  border: 1px solid var(--wiki-border-muted);
-  background-color: var(--wiki-bg-neutral);
+  border: 1px solid var(--wiki-border-subtle);
+  background-color: var(--wiki-bg-surface);
 }
 
 /* ── Tables ── */
@@ -162,7 +190,7 @@
   padding: 0.25rem 0.5rem;
 }
 
-/* ── Strong text in dark theme ── */
+/* ── Strong text ── */
 .wiki-article strong {
   color: var(--wiki-text-emphasized);
 }
@@ -170,4 +198,12 @@
 /* ── List markers ── */
 .wiki-article li::marker {
   color: var(--wiki-text-muted);
+}
+
+/* ── Reset base padding inside wiki article ── */
+.wiki-article section,
+.wiki-article nav,
+.wiki-article header,
+.wiki-article aside {
+  padding: 0;
 }
