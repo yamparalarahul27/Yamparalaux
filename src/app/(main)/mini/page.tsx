@@ -64,6 +64,7 @@ const workItems: WorkItem[] = [
     type: "Product design",
     note: "One-month sprint across mobile and web surfaces for a Solana community product.",
     status: "Case study",
+    href: "/projects/pubkey",
   },
   {
     year: "2022-2024",
