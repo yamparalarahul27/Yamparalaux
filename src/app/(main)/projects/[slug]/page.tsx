@@ -122,6 +122,29 @@ function CaseStudyViewer({ project }: { project: Project }) {
                 </div>
               </div>
             </div>
+
+            {/* ── Gallery (additional screens) ── */}
+            {active.gallery && active.gallery.length > 0 && (
+              <div className="cs-gallery">
+                <p className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wider mb-3">
+                  More screens ({active.gallery.length})
+                </p>
+                <div className="cs-gallery-grid">
+                  {active.gallery.map((src, i) => (
+                    <div key={i} className="cs-gallery-item">
+                      <Image
+                        src={src}
+                        alt={`${active.title} — screen ${i + 2}`}
+                        width={400}
+                        height={300}
+                        className="w-full h-auto object-contain"
+                        sizes="(max-width: 768px) 50vw, 300px"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* ── Stage counter ── */}

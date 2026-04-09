@@ -9,6 +9,8 @@ export type Stage = {
   subtitle: string;
   description: string;
   image: string;
+  /** Additional images shown as a scrollable gallery below the hero */
+  gallery?: string[];
   annotations: Annotation[];
 };
 
@@ -127,8 +129,139 @@ const passwordUx: Project = {
   ],
 };
 
+const pubkey: Project = {
+  slug: "pubkey",
+  title: "Revamping Opensource Discord Verification",
+  subtitle: "UI Revamp — Visual Design",
+  company: "PubKey",
+  stageCount: 6,
+  backHref: "/mini",
+  stages: [
+    {
+      id: "login-wallet",
+      title: "Login & Wallet",
+      subtitle: "Entry points",
+      description:
+        "Designed the Discord OAuth login screen with PubKey branding and a 3-step Solana wallet linking flow. Supports Solflare, Phantom, and Backpack with auto-detection of installed wallets.",
+      image: "/portfolio/pubkey/Login.png",
+      gallery: [
+        "/portfolio/pubkey/Link Solana Wallet/Step 1.png",
+        "/portfolio/pubkey/Link Solana Wallet/Step 2.png",
+      ],
+      annotations: [
+        { label: "Discord OAuth", description: "Single sign-on via Discord — the primary identity for community members" },
+        { label: "Wallet linking", description: "3-step wizard: Select Wallet → Verify → Sign Message" },
+        { label: "Multi-wallet", description: "Auto-detects Solflare, Phantom, and Backpack" },
+      ],
+    },
+    {
+      id: "community-dashboard",
+      title: "Community Dashboard",
+      subtitle: "The home view",
+      description:
+        "The community dashboard surfaces roles, token requirements, and NFT collections at a glance. Admins see token-gated access rules while members browse their community's NFT collection with search and filtering.",
+      image: "/portfolio/pubkey/Community/Dashbaord.png",
+      gallery: [
+        "/portfolio/pubkey/Community/Dashbaord-1.png",
+        "/portfolio/pubkey/Community/Dashbaord-2.png",
+        "/portfolio/pubkey/Community/Collection.png",
+        "/portfolio/pubkey/Community/Collection-1.png",
+        "/portfolio/pubkey/Community/Collection Change.png",
+      ],
+      annotations: [
+        { label: "Roles & tokens", description: "Token requirements (e.g., min 1,000 $ISLAND) displayed alongside roles" },
+        { label: "Collection view", description: "NFT gallery with search, collection cards for DeadList and PERKS" },
+        { label: "Dashboard tabs", description: "Dashboard and Collection tabs for quick navigation between views" },
+      ],
+    },
+    {
+      id: "community-management",
+      title: "Community Management",
+      subtitle: "Admin controls",
+      description:
+        "Full admin suite for community managers: role creation with a 4-step accordion, member directory with role-based filtering, activity logs with options, Discord bot configuration, and community settings including edit and delete flows.",
+      image: "/portfolio/pubkey/Community/Roles.png",
+      gallery: [
+        "/portfolio/pubkey/Community/Create/S1.png",
+        "/portfolio/pubkey/Community/Create/S2.png",
+        "/portfolio/pubkey/Community/Members.png",
+        "/portfolio/pubkey/Community/Logs.png",
+        "/portfolio/pubkey/Community/Logs/Option.png",
+        "/portfolio/pubkey/Community/Discord.png",
+        "/portfolio/pubkey/Community/Discord/Bot Settings.png",
+        "/portfolio/pubkey/Community/Settings.png",
+        "/portfolio/pubkey/Community/Edit.png",
+        "/portfolio/pubkey/Community/Delete.png",
+      ],
+      annotations: [
+        { label: "Role creation", description: "4-step accordion: Name → Condition Type → Configuration → Confirm" },
+        { label: "Member directory", description: "Searchable list with role filter and member management" },
+        { label: "Activity logs", description: "Timestamped log entries with contextual action options" },
+        { label: "Discord integration", description: "Bot settings and server configuration for verification" },
+      ],
+    },
+    {
+      id: "nft-views",
+      title: "NFT Views",
+      subtitle: "Ownership & detail",
+      description:
+        "Designed multiple NFT viewing states: your own collection (single or multiple items), other users' collections, and private profiles. The detail view shows traits, metadata, on-chain info, and a sidebar with other owned items from the same collection.",
+      image: "/portfolio/pubkey/NFT View Others, Other Owned in a Collection.png",
+      gallery: [
+        "/portfolio/pubkey/NFT View You Own From the Collection.png",
+        "/portfolio/pubkey/NFT view From Your Own Collection, If you own only1.png",
+        "/portfolio/pubkey/NFT view From Your Own Collection, Own More Than 1.png",
+        "/portfolio/pubkey/NFT View Others, Private Profile.png",
+        "/portfolio/pubkey/Community/Collection/Filter.png",
+        "/portfolio/pubkey/Community/Collection/Filter-1.png",
+        "/portfolio/pubkey/Community/Collection/PERKS at 12x.png",
+        "/portfolio/pubkey/Community/Collection/PERKS at 8x.png",
+      ],
+      annotations: [
+        { label: "Detail view", description: "Traits, metadata, owner profile, and collection sidebar in one screen" },
+        { label: "Ownership states", description: "Different layouts for own vs others' NFTs, single vs multiple" },
+        { label: "Collection filters", description: "Search and filter within collections at multiple grid densities" },
+      ],
+    },
+    {
+      id: "profile-states",
+      title: "Profile & States",
+      subtitle: "User views",
+      description:
+        "User profile with assets organized by Solana cluster, community membership list, and well-crafted empty states for new users who haven't joined or created communities yet. Search and discovery flow for finding communities.",
+      image: "/portfolio/pubkey/Profile/Assets.png",
+      gallery: [
+        "/portfolio/pubkey/Profile/Settings.png",
+        "/portfolio/pubkey/User with communiite.png",
+        "/portfolio/pubkey/User searching community.png",
+        "/portfolio/pubkey/No Community Created.png",
+        "/portfolio/pubkey/When there are no communities the user Joined..png",
+      ],
+      annotations: [
+        { label: "Asset portfolio", description: "NFTs and tokens grouped by Solana cluster with community context" },
+        { label: "Empty states", description: "Guided empty states for no communities joined or created" },
+        { label: "Community discovery", description: "Search flow for finding and joining communities" },
+      ],
+    },
+    {
+      id: "system-patterns",
+      title: "System Patterns",
+      subtitle: "Reusable components",
+      description:
+        "Consistent design system patterns across the product: toast notifications for transaction feedback, stepped accordion forms for complex creation flows, and responsive collection grids with multiple density options.",
+      image: "/portfolio/pubkey/Toast.png",
+      annotations: [
+        { label: "Toast system", description: "Contextual notifications for wallet actions and transaction states" },
+        { label: "Accordion forms", description: "Numbered step-by-step forms for role and community creation" },
+        { label: "Grid densities", description: "Collection views at 8x and 12x grid for different browsing needs" },
+      ],
+    },
+  ],
+};
+
 const projects: Record<string, Project> = {
   "password-ux": passwordUx,
+  pubkey: pubkey,
 };
 
 export function getProject(slug: string): Project | undefined {
