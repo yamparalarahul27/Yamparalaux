@@ -2,10 +2,7 @@
 
 import { useState, useEffect } from "react";
 import BackLink from "@/components/BackLink";
-import { journalEntries } from "@/lib/journal";
-
-const PASSCODE = "personalonlyforseshu";
-const STORAGE_KEY = "journal-unlocked";
+import { decryptJournal, type JournalEntry } from "@/lib/journal";
 
 function formatDateLong(iso: string) {
   const d = new Date(iso);
@@ -17,32 +14,38 @@ function formatDateLong(iso: string) {
 }
 
 export default function JournalPage() {
-  const [unlocked, setUnlocked] = useState(false);
+  const [entries, setEntries] = useState<JournalEntry[] | null>(null);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "true") {
-      setUnlocked(true);
-    }
     setHydrated(true);
+    const stored = sessionStorage.getItem("journal-passcode");
+    if (stored) {
+      decryptJournal(stored)
+        .then((decoded) => setEntries(decoded))
+        .catch(() => {
+          sessionStorage.removeItem("journal-passcode");
+        });
+    }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (input === PASSCODE) {
-      sessionStorage.setItem(STORAGE_KEY, "true");
-      setUnlocked(true);
+    try {
+      const decoded = await decryptJournal(input);
+      sessionStorage.setItem("journal-passcode", input);
+      setEntries(decoded);
       setError(false);
-    } else {
+    } catch {
       setError(true);
     }
   };
 
   if (!hydrated) return null;
 
-  if (!unlocked) {
+  if (!entries) {
     return (
       <main className="min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 [&_section]:!p-0 [&_section>div]:!p-0">
         <div className="max-w-md mx-auto flex flex-col gap-8">
@@ -54,7 +57,7 @@ export default function JournalPage() {
                 Journal
               </h1>
               <p className="text-base text-[var(--text-secondary)]">
-                This page is passcode protected.
+                Encrypted. Enter passcode to decrypt.
               </p>
             </div>
 
@@ -75,10 +78,7 @@ export default function JournalPage() {
                   Incorrect passcode. Try again.
                 </p>
               )}
-              <button
-                type="submit"
-                className="brutal-btn self-start"
-              >
+              <button type="submit" className="brutal-btn self-start">
                 Unlock
               </button>
             </form>
@@ -96,7 +96,7 @@ export default function JournalPage() {
 
         {/* Entries */}
         <div className="flex flex-col gap-10">
-          {journalEntries.map((entry, index) => (
+          {entries.map((entry, index) => (
             <section
               key={entry.date}
               className={`flex flex-col gap-4 border-t border-[var(--border-color)] pt-8 first:border-t-0 first:pt-0 animate-enter delay-${(index + 1) * 100}`}
