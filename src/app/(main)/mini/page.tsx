@@ -46,10 +46,19 @@ const careerHighlights = [
   "Worked at Synclo (2022-2024) on OPD and healthcare workflows across multiple hospital products.",
   "Joined Equicom Technologies in 2025 and continued building web3 products and internal tooling.",
   "Built and managed the ValveyAI website on Framer — an all-in-one no-code platform for websites, e-commerce, CRM, and automation.",
+  "Leading a team of 3 designers at Equicomtech — first leadership role. Learning hiring, allocation, and efficiency through hands-on mistakes.",
+  "Engineered 2 internal products as a result of team leadership: AgentUX (collection and UX builder) and Graphics Lab (unified graphic app).",
   "Maintains an active builder profile on Superteam Earn with public submission and win history.",
 ];
 
 const workItems: WorkItem[] = [
+  {
+    year: "2025",
+    title: "DeFi Cockpit",
+    type: "Product (WIP)",
+    note: "A front page for DeFi users — aggregating decentralised finance apps under one view for quick overview and action.",
+    status: "WIP",
+  },
   {
     year: "2025",
     title: "ValveyAI Website",
@@ -114,10 +123,17 @@ const workItems: WorkItem[] = [
   {
     year: "2025",
     title: "AgentUX",
-    type: "Product (WIP)",
-    note: "UX-flow diagnosis concept for founders and developers.",
+    type: "Internal product",
+    note: "Collection and UX builder — engineered as an internal product under design team leadership at Equicomtech.",
     status: "WIP",
     href: "https://agentux.hirahul.xyz/",
+  },
+  {
+    year: "2025",
+    title: "Graphics Lab",
+    type: "Internal product",
+    note: "A unified graphic app — engineered as an internal product under design team leadership at Equicomtech.",
+    status: "WIP",
   },
   {
     year: "2025",
