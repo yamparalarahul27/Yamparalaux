@@ -19,7 +19,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "ai-engineering",
-    lastUpdated: "2026-04-01",
+    lastUpdated: "2026-04-15",
     title: "AI Engineering",
     category: "Technical",
     excerpt:
@@ -100,11 +100,19 @@ export const blogPosts: BlogPost[] = [
           "It makes digits equal width, similar to monospace fonts. Keep in mind that some fonts change the appearance of numerals when this is used.",
         ],
       },
+      {
+        date: "2026-04-15",
+        title: "The 110% and the Golden Path",
+        paragraphs: [
+          "Today, while coming to office, I got a thought — what if I lose this job? What can I say to prove my self-worth?",
+          "Then I got the answer: I am doing my 110%. That extra 10% led to a golden path for MVP before the 31st. That 10% led to quick execution of design. That 10% got the design team efforts streamlined. That 10% got me a collective view of what feature we are building and where its source is.",
+        ],
+      },
     ],
   },
   {
     slug: "leading-team",
-    lastUpdated: "2026-04-03",
+    lastUpdated: "2026-04-14",
     title: "Leading Team",
     category: "Thinking",
     excerpt:
@@ -139,6 +147,15 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Hiring is very important. More than skills, communication is important. As agents become more powerful — even right now they can design — but what to design and how is still the job of a human, which needs clear communication.",
           "In my last hire, I neglected this and went for only work because it was urgent. But it did not turn out to be much help.",
+        ],
+      },
+      {
+        date: "2026-04-14",
+        title: "Habit, Hobby, Passion, Character",
+        paragraphs: [
+          "Yesterday, I met with our Legal Compliance head. What an energetic person — being 54, he is great at his work.",
+          "One thing we discussed that I want to share here: if you do something for some days it becomes a habit. More, it becomes a hobby. More, it becomes a passion. More, it becomes character. At work, try to build character.",
+          "Based on this, I shared this with my team. I am doing my best, but the problem is — there is no feedback from teammates about my leadership.",
         ],
       },
     ],
