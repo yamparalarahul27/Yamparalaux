@@ -120,6 +120,30 @@
   background-color: var(--wiki-bg-surface);
 }
 
+/* ── Intro stack: enforce visible spacing independent of global resets ── */
+.wiki-intro-flow {
+  display: grid;
+  row-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .wiki-intro-flow {
+    row-gap: 2rem;
+  }
+}
+
+/* ── Main column rhythm for the whole /mini page ── */
+.wiki-main-flow {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .wiki-main-flow {
+    row-gap: 2rem;
+  }
+}
+
 /* ── Tables ── */
 .wiki-table {
   min-width: 100%;
@@ -196,3 +220,32 @@
   color: var(--wiki-text-muted);
 }
 
+/* ── Vertical rhythm for major article sections ── */
+.wiki-sections {
+  display: grid;
+  row-gap: 1.75rem;
+}
+
+.wiki-sections > section {
+  display: grid;
+  row-gap: 0.875rem;
+}
+
+.wiki-sections > section + section {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--wiki-border-muted);
+}
+
+@media (min-width: 640px) {
+  .wiki-sections {
+    row-gap: 2.25rem;
+  }
+
+  .wiki-sections > section {
+    row-gap: 1rem;
+  }
+
+  .wiki-sections > section + section {
+    padding-top: 2rem;
+  }
+}
