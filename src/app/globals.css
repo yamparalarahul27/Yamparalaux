@@ -39,13 +39,15 @@ html, body {
   background-color: var(--bg-color);
 }
 
-* {
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 
 body {
+  margin: 0;
   background: transparent;
   color: var(--text-primary);
   font-family: var(--font-geist-sans), sans-serif;
