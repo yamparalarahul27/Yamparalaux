@@ -891,7 +891,7 @@ export default function DesignSystemSection() {
                       >
                         <div className="relative h-20 w-20 shrink-0 overflow-hidden">
                           <Image
-                            src="/Passport Size Photo.png"
+                            src="/headshot.png"
                             alt="Yamparala Rahul Portrait"
                             fill
                             className="object-cover grayscale transition-all duration-500 hover:grayscale-0"

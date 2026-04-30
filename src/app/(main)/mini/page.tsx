@@ -628,7 +628,7 @@ export default function MiniPortfolio() {
                       <td className="wiki-infobox-cell text-center" colSpan={2}>
                         <div className="mx-auto mb-2 size-24 overflow-hidden rounded-sm wiki-border border">
                           <Image
-                            src="/Passport Size Photo.png"
+                            src="/headshot.png"
                             alt="Yamparala Rahul portrait"
                             width={96}
                             height={96}

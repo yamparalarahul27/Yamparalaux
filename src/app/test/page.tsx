@@ -45,7 +45,7 @@ export default function MiniPage() {
       <section className="flex flex-col gap-4 mb-16">
         <div className="flex items-center gap-2 pb-1">
           <Image
-            src="/Passport Size Photo.png"
+            src="/headshot.png"
             alt="Yamparala Rahul"
             width={40}
             height={40}
