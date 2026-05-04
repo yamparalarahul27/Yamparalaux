@@ -119,7 +119,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "leading-team",
-    lastUpdated: "2026-04-14",
+    lastUpdated: "2026-05-04",
     title: "Leading Team",
     category: "Thinking",
     excerpt:
@@ -163,6 +163,24 @@ export const blogPosts: BlogPost[] = [
           "Yesterday, I met with our Legal Compliance head. What an energetic person — being 54, he is great at his work.",
           "One thing we discussed that I want to share here: if you do something for some days it becomes a habit. More, it becomes a hobby. More, it becomes a passion. More, it becomes character. At work, try to build character.",
           "Based on this, I shared this with my team. I am doing my best, but the problem is — there is no feedback from teammates about my leadership.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "Reframing the UI Designer as a UX Researcher",
+        paragraphs: [
+          "Today I was thinking about my team and how I can utilise them at max.",
+          "The graphic designer is set — no worries there. The UI designer is where I feel a little worried. More of his work is just becoming implementation, and without a brain behind it, there is no real work. So I decided to assign him the role of UX researcher.",
+          "Research is the differentiating factor next. You can get good UI — even all sorts of UI — out of AI tools. The real question becomes what to do and how to do it, and most are not doing that in a way that gets to the best version.",
+          "I already have something for this. Internally I built an app to capture all the references in our sector, which gives a lot of real-world, shipped designs. The next step is figuring out what to implement.",
+          "To my surprise, I forgot the UI designer is on leave today. So tomorrow when he comes in, I will assign him to capture references and come up with ideas to work on.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "Three Hours on Liquidation with Bhumika",
+        paragraphs: [
+          "Today I also interviewed Bhumika. For three hours we brainstormed on ideas, and over my expectation she actually learned about Liquidation and came up with what it is and what can be done. That was good.",
         ],
       },
     ],
