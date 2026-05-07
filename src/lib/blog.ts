@@ -202,6 +202,76 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    slug: "career-notes",
+    lastUpdated: "2026-05-04",
+    title: "Career Notes",
+    category: "Thinking",
+    excerpt:
+      "Notes on compensation, hiring, and the hard people decisions that come with leading.",
+    readTime: "5 min read",
+    published: true,
+    entries: [
+      {
+        date: "2026-05-04",
+        title: "Underpaid by Comparison, 100% Up from Last",
+        paragraphs: [
+          "I have talked with 10+ peers recently and started feeling underpaid. But if I zoom out, I am already at a 100% hike from my last fulltime. That is not a small move.",
+          "So this is a strong base for my next jump, not a verdict on the current one. The data from those 10+ conversations becomes input for the move, not a reason to feel bad now.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "First Two Layers When Reviewing 1K Portfolios",
+        paragraphs: [
+          "I am hiring designers. LinkedIn charged me 10k INR for the job post and 1K applicants flowed in. There is no way to give every one a deep read, so the first pass is brutally simple.",
+          "Layer 1 is the resume and the portfolio CTA. Is the link there, can I click it, does it actually open? A surprising number fail at this.",
+          "Layer 2 is cleanness and attention to detail on the portfolio itself. Not the case studies — the surface. If the surface is sloppy, the depth almost never compensates.",
+        ],
+        bullets: [
+          "Layer 1: resume + a clear, working portfolio CTA.",
+          "Layer 2: cleanness and attention to detail on the portfolio surface.",
+          "Most candidates never make it past these two layers.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "Thinking About Firing the UI Designer",
+        paragraphs: [
+          "Today I had a thought I am not sure about. I am considering firing the UI designer and using the same budget to hire two stronger people.",
+          "I feel bad about it. Firing is something I want to avoid. But if the business needs to run, this kind of decision has to be made. The middle path I am turning over is pre-notice — letting him know early so he can jump to another job himself before things get formal.",
+          "I am very unsure. As a lead, when I think purely about work, firing is the best move. As a person, I am not there yet.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "Talked to Parents, and the Words Did Not Come",
+        paragraphs: [
+          "I just talked to my parents about the firing thought. As I kept speaking, I could not get the confidence to actually say \"I will fire you, better you find another job in the meantime.\"",
+          "The more I sit with it, the more I think UX research is fine work for him. He can do that.",
+          "What I do want to do is share what I experienced yesterday — meeting 10+ people, seeing the market — and tell him this is how things are, and these are the thoughts I am having. Not as a threat, as a real conversation.",
+          "I am still not sure I will be able to say so.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "Resolve as a Skill",
+        paragraphs: [
+          "Based on the last 25 years, I strongly feel I lack the solid resolve of saying something that may have a sad or negative impact on someone.",
+          "Being strong like that is a skill — just like communication is a skill — and it should be taught. I am going to try to teach it to Seshu.",
+        ],
+      },
+      {
+        date: "2026-05-04",
+        title: "Ten Points by June 15",
+        paragraphs: [
+          "I finally gave Praveen a last push — not sure if it is the last of the day or the last last. I told him to take the work more seriously.",
+          "I asked him about his probation period. It ends June 15. So I am holding 10 points that Praveen needs to hit by then. If he hits them, that will say Praveen is a great asset for Crpko.",
+          "An idea I got from this: a page where the team can see the points I am holding them to and what they have already achieved. So it is not vague, not arbitrary. They know exactly where they stand.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "why-i-build-in-public",
     lastUpdated: "2025-03-15",
     title: "Why I Build in Public",
