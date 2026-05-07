@@ -18,3 +18,4 @@ Notes:
 
 - https://imsuryaraj.framer.website/nps
 - https://imsuryaraj.framer.website/trust-2
+- https://mohan4858.framer.wiki/projects/orbital
