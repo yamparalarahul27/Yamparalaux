@@ -131,6 +131,20 @@ export const blogPosts: BlogPost[] = [
           "Team plan: Shaina on graphics, Praveen on research, me on mobile or web, a new fast-executor on what is left.",
         ],
       },
+      {
+        date: "2026-05-07",
+        title: "A Special Mention: Jaswant",
+        paragraphs: [
+          "A special mention I want to make is about a new teammate, Jaswant. He is the one who got me using AI full-fledged, and the one who got me into the GitHub of the organisation. I cannot really capture his impact in a few lines.",
+          "Some things I picked up from him that have stuck:",
+        ],
+        bullets: [
+          "Using multiple AI tools, not just one.",
+          "Having rules.",
+          "Having a process.",
+          "Keeping a `.md` file for proper logs.",
+        ],
+      },
     ],
   },
   {
