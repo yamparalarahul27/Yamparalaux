@@ -19,7 +19,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "ai-engineering",
-    lastUpdated: "2026-04-16",
+    lastUpdated: "2026-05-07",
     title: "AI Engineering",
     category: "Technical",
     excerpt:
@@ -113,6 +113,22 @@ export const blogPosts: BlogPost[] = [
         title: "Taking Ownership of the PRD",
         paragraphs: [
           "Today, after a small discussion, I am very disappointed by my PM — not because of management, but because he is avoiding the work of writing a detailed PRD. Since he does not want to do it, I have taken the initiative and started doing it myself. Obviously using AI, but it is good to experience engineering and product management in one view.",
+        ],
+      },
+      {
+        date: "2026-05-07",
+        title: "Catalogue First, Then Restructure",
+        paragraphs: [
+          "This week I noticed a significant shift in my process. AI has made shipping faster, so the question moved from \"can we ship this\" to \"what to ship and how to package it within what already exists.\" That is the new bottleneck.",
+          "One level of the answer is a repo of competitor screens with good metadata — what they are doing today, what they are planning next, and eventually user sentiment per feature. So when we build, we work from a valid feature list, not a gut feeling.",
+          "I built an MVP for this called AgentUX Catalogue — still in progress. Once the metadata is proper, brainstorming layout and UX gets two things: the catalogue gives data, the AI tool gives choices. It stops being guesswork.",
+          "The \"new\" also needs to be captured, so I am planning a GitHub workflow that fetches raw info on a schedule. More on that later.",
+          "Now I am building this — who manages it? I have 2 people in the team. Shaina is handling graphics, that is set. Praveen is not yet at the mark I am looking for, so I am leading the design direction myself. As I hire, I am looking for someone good at speed. The plan: Praveen takes research, I take either mobile or web, and the new hire handles what is left.",
+        ],
+        bullets: [
+          "AI made shipping cheap, so packaging within what exists became the bottleneck.",
+          "The catalogue gives data, the AI tool gives choices. Brainstorming becomes data-backed.",
+          "Team plan: Shaina on graphics, Praveen on research, me on mobile or web, a new fast-executor on what is left.",
         ],
       },
     ],
